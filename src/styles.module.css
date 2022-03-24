@@ -1,9 +1,159 @@
 /* add css module styles here (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+.containerAlert {
+    width: 100%;
+    position: relative;
+    margin-top: 3%;
 }
+.bgSuccesss {
+    background: #05BFAE;
+    border-radius: 32px;
+}
+.bgWarning {
+    background: #FF9800;
+    border-radius: 32px;
+}
+.bgInfo {
+    background: #739BE5;
+    border-radius: 32px;
+}
+.bgDanger {
+    background: #F63E50;
+    border-radius: 32px;
+}
+.alertSuccessImg {
+    position: absolute;
+    top: -41px;
+    left: 6%;
+}
+.containerContenu {
+    padding: 20px 20px 20px 0;
+    margin-left: 24%;
+}
+.titreAlert {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 34px;
+    letter-spacing: -0.035em;
+    color: #FFFFFF;
+    margin: 0;
+}
+.textAlert {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+.imgEllipse {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.close{
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: 0 0;
+    border: none;
+    color: currentColor;
+    font-family: inherit;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+   
+}
+.btnClose {
+    background: transparent;
+    border: none;
+}
+.containerBtnIcon {
+    text-align: right;
+}
+.positionBottomRight {
+    position: absolute;
+    right: 2%;
+    bottom: 0;
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: 50% 50%;
+    animation: pulse 6s cubic-bezier(.5,.5,0,1);
+}
+.positionBottomLeft {
+    position: absolute;
+    left: 2%;
+    bottom: 0;
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: 50% 50%;
+    animation: pulse 6s cubic-bezier(.5,.5,0,1);
+}
+.positionCenter {
+    position: absolute;
+    left: 40%;
+    top: 3%;
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: 50% 50%;
+    animation: pulse 6s cubic-bezier(.5,.5,0,1);
+}
+.positionTopRight {
+    position: absolute;
+    right: 2%;
+    top: 50px;
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: 50% 50%;
+    animation: pulse 6s cubic-bezier(.5,.5,0,1);
+    
+}
+.positionTopLeft {
+    position: absolute;
+    left: 2%;
+    top: 50px;
+    transform: scale(0);
+    opacity: 0;
+    transform-origin: 50% 50%;
+    animation: pulse 6s cubic-bezier(.5,.5,0,1);
+}
+.positionTopLeft:hover {
+    animation-play-state: paused;
+  }
+  .positionTopRight:hover {
+    animation-play-state: paused;
+  }
+  .positionBottomLeft:hover {
+    animation-play-state: paused;
+  }
+  .positionCenter:hover {
+    animation-play-state: paused;
+  }
+  .positionBottomRight:hover {
+    animation-play-state: paused;
+  }
+@keyframes pulse {
+  
+    25% {
+      opacity: 0.6;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+    
+    100% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    
+  }

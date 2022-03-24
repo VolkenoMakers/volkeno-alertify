@@ -1,10 +1,14 @@
 import React from 'react'
 
-import { ExampleComponent } from 'alertify'
+import { Alertify } from 'alertify'
 import 'alertify/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+    var text = ''
+    var typeAlert = 'warning'
+    var titre = ''
+    var position = 'top-left'
+  return <Alertify text={text} titre={titre} typeAlert={typeAlert} position={position} />
 }
 
 export default App

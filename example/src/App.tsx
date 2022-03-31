@@ -5,10 +5,11 @@ import 'alertify/dist/index.css'
 
 const App = () => {
     var text = ''
-    var typeAlert = 'warning'
-    var titre = ''
-    var position = 'top-left'
-  return <Alertify text={text} titre={titre} typeAlert={typeAlert} position={position} />
+    var typeAlert = 'success'
+    var title = ''
+    var position = 'center'
+    var duration = 5000
+  return <Alertify text={text} title={title} typeAlert={typeAlert} position={position} duration={duration} />
 }
 
 export default App

@@ -1,19 +1,31 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from '../../src/styles.module.css'
 import AlertDangerImg from 'fail.png'
 import ImgEllipse from 'ellipse-fail.png'
 import IconClose from 'close.png'
 
 type Props = {
-  titre?: string
+  title?: string
   text?: string
   position?: string
+  duration?: number
 }
 
-const AlertDanger = ({ titre, text, position }: Props) => {
-  titre = 'Echec !'
-  text = 'Modifiez quelques éléments et essayez de soumettre à nouveau.'
-  //   position = ''
+const AlertDanger = ({ title, text, position, duration }: Props) => {
+  const [show, setShow] = useState(true)
+  const closeToast = () => {
+    setShow(false)
+  }
+  title = title || 'Failure !'
+  text = text || 'Change a few things and try submitting again.'
+  duration = duration || 5000
+  useEffect(() => {
+    console.log(duration)
+    setTimeout(closeToast, duration)
+  }, [])
+  if (show === false) {
+    return null
+  }
   if (position === 'bottom-right') {
     return (
       <div className={styles.positionBottomRight}>
@@ -28,7 +40,10 @@ const AlertDanger = ({ titre, text, position }: Props) => {
             </div>
             <div className={styles.containerContenu}>
               <div className={styles.containerBtnIcon}>
-                <button className={styles.btnClose}>
+                <button
+                  className={styles.btnClose}
+                  onClick={() => closeToast()}
+                >
                   <img
                     src={IconClose}
                     alt='Icon close'
@@ -36,7 +51,7 @@ const AlertDanger = ({ titre, text, position }: Props) => {
                   />
                 </button>
               </div>
-              <h2 className={styles.titreAlert}>{titre}</h2>
+              <h2 className={styles.titreAlert}>{title}</h2>
               <p className={styles.textAlert}>{text}</p>
             </div>
             <div>
@@ -65,7 +80,10 @@ const AlertDanger = ({ titre, text, position }: Props) => {
             </div>
             <div className={styles.containerContenu}>
               <div className={styles.containerBtnIcon}>
-                <button className={styles.btnClose}>
+                <button
+                  className={styles.btnClose}
+                  onClick={() => closeToast()}
+                >
                   <img
                     src={IconClose}
                     alt='Icon close'
@@ -73,7 +91,7 @@ const AlertDanger = ({ titre, text, position }: Props) => {
                   />
                 </button>
               </div>
-              <h2 className={styles.titreAlert}>{titre}</h2>
+              <h2 className={styles.titreAlert}>{title}</h2>
               <p className={styles.textAlert}>{text}</p>
             </div>
             <div>
@@ -102,7 +120,10 @@ const AlertDanger = ({ titre, text, position }: Props) => {
             </div>
             <div className={styles.containerContenu}>
               <div className={styles.containerBtnIcon}>
-                <button className={styles.btnClose}>
+                <button
+                  className={styles.btnClose}
+                  onClick={() => closeToast()}
+                >
                   <img
                     src={IconClose}
                     alt='Icon close'
@@ -110,7 +131,7 @@ const AlertDanger = ({ titre, text, position }: Props) => {
                   />
                 </button>
               </div>
-              <h2 className={styles.titreAlert}>{titre}</h2>
+              <h2 className={styles.titreAlert}>{title}</h2>
               <p className={styles.textAlert}>{text}</p>
             </div>
             <div>
@@ -139,7 +160,10 @@ const AlertDanger = ({ titre, text, position }: Props) => {
             </div>
             <div className={styles.containerContenu}>
               <div className={styles.containerBtnIcon}>
-                <button className={styles.btnClose}>
+                <button
+                  className={styles.btnClose}
+                  onClick={() => closeToast()}
+                >
                   <img
                     src={IconClose}
                     alt='Icon close'
@@ -147,7 +171,7 @@ const AlertDanger = ({ titre, text, position }: Props) => {
                   />
                 </button>
               </div>
-              <h2 className={styles.titreAlert}>{titre}</h2>
+              <h2 className={styles.titreAlert}>{title}</h2>
               <p className={styles.textAlert}>{text}</p>
             </div>
             <div>
@@ -176,7 +200,10 @@ const AlertDanger = ({ titre, text, position }: Props) => {
             </div>
             <div className={styles.containerContenu}>
               <div className={styles.containerBtnIcon}>
-                <button className={styles.btnClose}>
+                <button
+                  className={styles.btnClose}
+                  onClick={() => closeToast()}
+                >
                   <img
                     src={IconClose}
                     alt='Icon close'
@@ -184,7 +211,7 @@ const AlertDanger = ({ titre, text, position }: Props) => {
                   />
                 </button>
               </div>
-              <h2 className={styles.titreAlert}>{titre}</h2>
+              <h2 className={styles.titreAlert}>{title}</h2>
               <p className={styles.textAlert}>{text}</p>
             </div>
             <div>
@@ -200,8 +227,38 @@ const AlertDanger = ({ titre, text, position }: Props) => {
     )
   }
   return (
-    <div>
-      <p>Veuillez choisir une position</p>
+    <div className={styles.positionBottomRight}>
+      <div className={styles.containerAlert}>
+        <div className={styles.bgDanger}>
+          <div>
+            <img
+              src={AlertDangerImg}
+              alt='AlertDangerImg'
+              className={styles.alertSuccessImg}
+            />
+          </div>
+          <div className={styles.containerContenu}>
+            <div className={styles.containerBtnIcon}>
+              <button className={styles.btnClose} onClick={() => closeToast()}>
+                <img
+                  src={IconClose}
+                  alt='Icon close'
+                  className={styles.iconClose}
+                />
+              </button>
+            </div>
+            <h2 className={styles.titreAlert}>{title}</h2>
+            <p className={styles.textAlert}>{text}</p>
+          </div>
+          <div>
+            <img
+              src={ImgEllipse}
+              alt='AlertEllipse'
+              className={styles.imgEllipse}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

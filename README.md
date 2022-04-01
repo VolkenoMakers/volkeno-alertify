@@ -1,13 +1,13 @@
-# alertify
+# Volkeno-Alertify
 
-> Page alerte
+> ReactJS, awesome notification toast
 
-[![NPM](https://img.shields.io/npm/v/alertify.svg)](https://www.npmjs.com/package/alertify) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/alertify.svg)](https://www.npmjs.com/package/volkeno-alertify) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save alertify
+npm install --save volkeno-alertify
 ```
 
 ## Usage
@@ -15,16 +15,33 @@ npm install --save alertify
 ```tsx
 import React, { Component } from 'react'
 
-import MyComponent from 'alertify'
+import { VolkenoAlertify } from 'volkeno-alertify'
 import 'alertify/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return <VolkenoAlertify
+              title="My Title"
+              text="My Text"
+              duration=5000
+              alertState="success"
+              position="left-top"
+            />
   }
 }
 ```
 
+## Configuration - Props
+
+| Property                 |   Type   | Require  |  Default | Description                                                                              |
+| ------------------------ | :------: | :-----:  | :-------:| :------------------------------------------------------------------------------ |
+| alertState               | string   |  true    | sucess   | Toast alert state (success, danger, warning, info)                                       |
+| title                    | string   |  true    | ...      |  Toast alert title                                                                        |
+| text                     | string   |  true    | ...      |   Toast alert textual message                                                              |
+| duration                 | integer  |  false   | 5000     |   Toast alert duration time                                                                |
+| position                 | string   |  true    | center   |   Toast UI position on the page (center, bottom-right, bottom-left, top-left, top-right)   |
+
+
 ## License
 
-MIT © [adama199](https://github.com/adama199)
+MIT © [VolkenoMakers](https://github.com/VolkenoMakers)

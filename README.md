@@ -33,15 +33,13 @@ class Example extends Component {
 
 ## Configuration - Props
 
-**Props require**
-
-| Property                 |   Type   | Default | Description                                                                              |
-| ------------------------ | :------: | :-----: | ---------------------------------------------------------------------------------------- |
-| alertState               | string   |  success| Toast alert state (success, danger, warning, info)                                       |
-| title                    | string   |  ....   | Toast alert title                                                                        |
-| text                     | string   |  ....   | Toast alert textual message                                                              |
-| duration                 | integer  |  5000   | Toast alert duration time                                                                |
-| position                 | string   |  center | Toast UI position on the page (center, bottom-right, bottom-left, top-left, top-right)   |
+| Property                 |   Type   | Require  |  Default | Description                                                                              |
+| ------------------------ | :------: | :-----:  | :-------:| :------------------------------------------------------------------------------ |
+| alertState               | string   |  true    | sucess   | Toast alert state (success, danger, warning, info)                                       |
+| title                    | string   |  true    | ...      |  Toast alert title                                                                        |
+| text                     | string   |  true    | ...      |   Toast alert textual message                                                              |
+| duration                 | integer  |  false   | 5000     |   Toast alert duration time                                                                |
+| position                 | string   |  true    | center   |   Toast UI position on the page (center, bottom-right, bottom-left, top-left, top-right)   |
 
 
 ## License

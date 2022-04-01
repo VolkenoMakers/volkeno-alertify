@@ -18,7 +18,7 @@ const AlertDanger = ({ title, text, position, duration }: Props) => {
   }
   title = title || 'Failure !'
   text = text || 'Change a few things and try submitting again.'
-  duration = duration || 5000
+  duration = duration ? duration : 5000
   useEffect(() => {
     console.log(duration)
     setTimeout(closeToast, duration)

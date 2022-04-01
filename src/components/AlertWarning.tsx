@@ -18,7 +18,7 @@ const AlertWarning = ({ title, text, position, duration }: Props) => {
   }
   title = title || 'Warning!'
   text = text || 'Sorry ! There was a problem with your request.'
-  duration = duration || 5000
+  duration = duration ? duration : 5000
   useEffect(() => {
     console.log(duration)
     setTimeout(closeToast, duration)

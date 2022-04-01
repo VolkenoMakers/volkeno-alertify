@@ -18,7 +18,7 @@ const AlertSuccess = ({ title, text, position, duration }: Props) => {
   }
   title = title || 'well done!'
   text = text || 'Your connection has been validated.'
-  duration = duration || 5000
+  duration = duration ? duration : 5000
   useEffect(() => {
     console.log(duration)
     setTimeout(closeToast, duration)

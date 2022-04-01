@@ -16,14 +16,14 @@ npm install --save volkeno-alertify
 import React, { Component } from 'react'
 
 import { VolkenoAlertify } from 'volkeno-alertify'
-import 'alertify/dist/index.css'
+import 'volkeno-alertify/dist/index.css'
 
 class Example extends Component {
   render() {
     return <VolkenoAlertify
               title="My Title"
               text="My Text"
-              duration=5000
+              duration={5000}
               alertState="success"
               position="left-top"
             />

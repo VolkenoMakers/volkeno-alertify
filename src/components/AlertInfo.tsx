@@ -18,7 +18,7 @@ const AlertInfo = ({ title, text, position, duration }: Props) => {
   }
   title = title || 'Hello !'
   text = text || 'Do you have a problem? Just use this contact form.'
-  duration = duration || 5000
+  duration = duration ? duration : 5000
   useEffect(() => {
     console.log(duration)
     setTimeout(closeToast, duration)

@@ -20,7 +20,7 @@ import 'alertify/dist/index.css'
 
 class Example extends Component {
   render() {
-    return <Alertify
+    return <VolkenoAlertify
               title="My Title"
               text="My Text"
               duration=5000

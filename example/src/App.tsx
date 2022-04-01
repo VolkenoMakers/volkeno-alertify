@@ -1,15 +1,14 @@
 import React from 'react'
-
-import { Alertify } from 'alertify'
-import 'alertify/dist/index.css'
+import { VolkenoAlertify } from 'volkeno-alertify'
+import 'volkeno-alertify/dist/index.css'
 
 const App = () => {
     var text = ''
-    var typeAlert = 'success'
+    var alertState = 'warning'
     var title = ''
     var position = 'center'
     var duration = 5000
-  return <Alertify text={text} title={title} typeAlert={typeAlert} position={position} duration={duration} />
+  return <VolkenoAlertify text={text} title={title} alertState={alertState} position={position} duration={duration} />
 }
 
 export default App

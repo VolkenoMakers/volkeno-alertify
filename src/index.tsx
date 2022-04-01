@@ -8,26 +8,26 @@ import styles from './styles.module.css'
 interface Props {
   title?: string
   text?: string
-  typeAlert?: string
+  alertState?: string
   position?: string
   duration?: number
 }
 
-export const Alertify = ({
+export const VolkenoAlertify = ({
   title,
   text,
-  typeAlert,
+  alertState,
   position,
   duration
 }: Props) => {
-  if (typeAlert === 'success') {
+  if (alertState === 'success') {
     return (
       <div className={styles.containerPage}>
         <AlertSuccess text={text} title={title} position={position} />
       </div>
     )
   }
-  if (typeAlert === 'warning') {
+  if (alertState === 'warning') {
     return (
       <div className={styles.containerPage}>
         <AlertWarning
@@ -39,14 +39,14 @@ export const Alertify = ({
       </div>
     )
   }
-  if (typeAlert === 'info') {
+  if (alertState === 'info') {
     return (
       <div className={styles.containerPage}>
         <AlertInfo text={text} title={title} position={position} />
       </div>
     )
   }
-  if (typeAlert === 'danger') {
+  if (alertState === 'danger') {
     return (
       <div className={styles.containerPage}>
         <AlertDanger text={text} title={title} position={position} />

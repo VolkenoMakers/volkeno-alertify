@@ -2,7 +2,7 @@
 
 > ReactJS, awesome notification toast
 
-[![NPM](https://img.shields.io/npm/v/alertify.svg)](https://www.npmjs.com/package/alertify) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/alertify.svg)](https://www.npmjs.com/package/volkeno-alertify) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 

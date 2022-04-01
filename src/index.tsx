@@ -23,7 +23,12 @@ export const VolkenoAlertify = ({
   if (alertState === 'success') {
     return (
       <div className={styles.containerPage}>
-        <AlertSuccess text={text} title={title} position={position} />
+        <AlertSuccess
+          text={text}
+          title={title}
+          position={position}
+          duration={duration}
+        />
       </div>
     )
   }
@@ -42,20 +47,30 @@ export const VolkenoAlertify = ({
   if (alertState === 'info') {
     return (
       <div className={styles.containerPage}>
-        <AlertInfo text={text} title={title} position={position} />
+        <AlertInfo
+          text={text}
+          title={title}
+          position={position}
+          duration={duration}
+        />
       </div>
     )
   }
   if (alertState === 'danger') {
     return (
       <div className={styles.containerPage}>
-        <AlertDanger text={text} title={title} position={position} />
+        <AlertDanger
+          text={text}
+          title={title}
+          position={position}
+          duration={duration}
+        />
       </div>
     )
   }
   return (
     <div className={styles.containerPage}>
-      <h1>Il faut définir un statut pour voir l'alert.</h1>
+      <h1>You must define a status for the volkeno-alertify module to work.</h1>
     </div>
   )
 }
